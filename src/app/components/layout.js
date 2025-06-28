@@ -1,14 +1,24 @@
-import Navbar from './navbar';
-import Footer from './footer';
-import WhatsAppCTA from './whatsappCTA';
+"use client";
 
-export default function Layout({ children }) {
+import { usePathname } from "next/navigation";
+import Navbar from "./navbar";
+import Footer from "./footer";
+import WhatsAppCTA from "./whatsappCTA";
+
+export default function AppLayout({ children }) {
+  const pathname = usePathname();
+  const isAdmin = pathname.startsWith("/admin");
+
+  if (isAdmin) {
+    return <>{children}</>; // Layout admin pakai layout sendiri
+  }
+
   return (
-    <div className="min-h-screen bg-gray-50">
+    <>
       <Navbar />
       <main>{children}</main>
       <Footer />
       <WhatsAppCTA />
-    </div>
+    </>
   );
 }
