@@ -1,6 +1,6 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import { FiShoppingCart } from 'react-icons/fi';
+import Link from "next/link";
+import Image from "next/image";
+import { FiShoppingCart } from "react-icons/fi";
 
 export default function Navbar() {
   return (
@@ -10,10 +10,10 @@ export default function Navbar() {
           <div className="flex space-x-7">
             <div>
               <Link href="/" className="flex items-center ">
-                <Image 
-                  src="/images/logo.png" 
+                <Image
+                  src="/images/logo.png"
                   alt="NEODIESEL ANGKASA TRACTOR Logo"
-                  width={180} 
+                  width={180}
                   height={180}
                   className="h-16 w-auto"
                 />
@@ -21,15 +21,35 @@ export default function Navbar() {
             </div>
           </div>
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="py-4 px-2 text-gray-500 font-semibold hover:text-blue-600 transition duration-300">Home</Link>
-            <Link href="/about" className="py-4 px-2 text-gray-500 font-semibold hover:text-blue-600 transition duration-300">About</Link>
-            <Link href="/products" className="py-4 px-2 text-gray-500 font-semibold hover:text-blue-600 transition duration-300">Products</Link>
-            <Link href="/contact" className="py-4 px-2 text-gray-500 font-semibold hover:text-blue-600 transition duration-300">Contact</Link>
-            <Link href="/admin" className="py-4 px-2 text-gray-500 font-semibold hover:text-blue-600 transition duration-300">Admin</Link>
+            <Link
+              href="/"
+              className="py-4 px-2 text-gray-500 font-semibold hover:text-blue-600 transition duration-300"
+            >
+              Home
+            </Link>
+            <Link
+              href="/about"
+              className="py-4 px-2 text-gray-500 font-semibold hover:text-blue-600 transition duration-300"
+            >
+              About
+            </Link>
+            <Link
+              href="/products"
+              className="py-4 px-2 text-gray-500 font-semibold hover:text-blue-600 transition duration-300"
+            >
+              Products
+            </Link>
+            <Link
+              href="/contact"
+              className="py-4 px-2 text-gray-500 font-semibold hover:text-blue-600 transition duration-300"
+            >
+              Contact
+            </Link>
           </div>
           <div className="md:hidden flex items-center">
             <button className="outline-none mobile-menu-button">
-              <svg className="w-6 h-6 text-gray-500" 
+              <svg
+                className="w-6 h-6 text-gray-500"
                 fill="none"
                 strokeLinecap="round"
                 strokeLinejoin="round"
