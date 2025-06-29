@@ -15,6 +15,7 @@ export default function AdminLoginPage() {
     const validPassword = "admin123";
 
     if (username === validUsername && password === validPassword) {
+      localStorage.setItem("isLoggedIn", "true");
       router.push("/admin");
     } else {
       alert("Username atau password salah.");
